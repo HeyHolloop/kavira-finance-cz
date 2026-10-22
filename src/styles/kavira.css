@@ -122,8 +122,8 @@ a { color: inherit; }
 }
 
 .kf-tete__baseline {
-  font-size: 0.78rem;
-  color: var(--kf-gris);
+  font-size: 0.82rem;
+  color: var(--kf-encre-2);
   letter-spacing: 0.01em;
   margin: 0;
 }
@@ -161,13 +161,13 @@ a { color: inherit; }
 
 .kf-tete__marque {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 2rem;
   padding: 1.5rem 0 1.35rem;
   flex-wrap: wrap;
 }
-.kf-tete__marque .kf-masthead { align-self: flex-end; }
+.kf-tete__marque .kf-masthead { align-self: center; }
 .kf-tete__marque .kf-recherche { width: 21rem; }
 @media (max-width: 700px) {
   .kf-tete__marque .kf-recherche { width: 100%; }
@@ -210,6 +210,7 @@ a { color: inherit; }
   color: var(--kf-papier);
   box-shadow: inset 0 -3px 0 var(--kf-terre);
 }
+.kf-nav { border-bottom: 0; }
 
 /* ─── ACCROCHE (HERO) — bandeau pleine largeur, encre verte ── */
 

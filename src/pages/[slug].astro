@@ -79,6 +79,7 @@ const layoutDescription = page === "about"
   description={layoutDescription}
   ogImage={article?.data.image}
   ogType={article ? "article" : "website"}
+  titleExact={!!article}
 >
   {page === "about" && (
     <script is:inline type="application/ld+json" slot="head" set:html={JSON.stringify(aboutSchema)} />

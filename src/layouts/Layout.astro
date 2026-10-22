@@ -14,6 +14,7 @@ interface Props {
   noindex?: boolean;
   ogTitle?: string;
   ogDescription?: string;
+  titleExact?: boolean;
 }
 
 const {
@@ -24,11 +25,14 @@ const {
   noindex = false,
   ogTitle,
   ogDescription,
+  titleExact = false,
 } = Astro.props;
 
 const lang = (SITE_CONFIG.locale || "cs-CZ").split("-")[0] || "cs";
 const canonical = new URL(Astro.url.pathname, SITE_URL + "/").href;
-const fullTitle = title.includes(SITE_TITLE) ? title : `${title} | ${SITE_TITLE}`;
+// Contrat Lorixa : le <title> d'un article est son metaTitle TEL QUEL.
+// Jamais de suffixe « | Nom du média » sur une page d'article.
+const fullTitle = titleExact ? title : title.includes(SITE_TITLE) ? title : `${title} | ${SITE_TITLE}`;
 const socialTitle = ogTitle || fullTitle;
 const socialDescription = ogDescription || description;
 const ogAbs = ogImage.startsWith("http") ? ogImage : `${SITE_URL}${ogImage}`;

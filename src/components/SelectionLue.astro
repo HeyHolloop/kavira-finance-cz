@@ -1,0 +1,60 @@
+---
+import type { CollectionEntry } from "astro:content";
+import CoverImage from "./CoverImage.astro";
+import { SITE_CONFIG, categoryLabel } from "../config";
+import { formatDate } from "../lib/live";
+
+interface Props {
+  items: CollectionEntry<"articles">[];
+}
+
+const { items } = Astro.props;
+const une = items[0];
+const autres = items.slice(1, 5);
+const home = SITE_CONFIG.home ?? {};
+const aMoje = (home.featured ?? []) as { title: string }[];
+---
+
+{items.length > 0 && (
+  <section class="kf-section">
+    <div class="kf-feuille">
+      <div class="kf-section__entete">
+        <h2 class="kf-section__titre">{SITE_CONFIG.ui.mostReadArticles}</h2>
+        <p class="kf-section__note">Otázky, které se na nás obracejí opakovaně — a ty, které právě rozpracováváme.</p>
+      </div>
+
+      <div class="kf-selection">
+        {une && (
+          <a class="kf-une" href={`/${une.slug}/`}>
+            {une.data.image && (
+              <div class="kf-une__image">
+                <CoverImage src={une.data.image} alt="" loading="eager" fetchpriority="high" width={1200} height={675} />
+              </div>
+            )}
+            <div class="kf-une__corps">
+              <p class="kf-carte__rubrique">{categoryLabel(une.data.categorySlug)}</p>
+              <h3 class="kf-une__titre">{une.data.title}</h3>
+              {une.data.excerpt && <p class="kf-une__extrait">{une.data.excerpt}</p>}
+              <div class="kf-carte__pied">
+                <span>{formatDate(une.data.date, SITE_CONFIG.locale)}</span>
+                <span class="kf-carte__suite">{SITE_CONFIG.ui.readMore}</span>
+              </div>
+            </div>
+          </a>
+        )}
+
+        {aMoje.length > 0 && (
+          <div class="kf-liste-cote">
+            <p class="kf-liste-cote__entete">V přípravě</p>
+            {aMoje.map((f, i) => (
+              <div class="kf-liste-cote__item">
+                <p class="kf-liste-cote__num">{String(i + 1).padStart(2, "0")}</p>
+                <p class="kf-liste-cote__titre">{f.title}</p>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+)}

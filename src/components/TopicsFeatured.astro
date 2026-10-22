@@ -1,0 +1,26 @@
+---
+import { SITE_CONFIG } from "../config";
+
+const home = SITE_CONFIG.home ?? {};
+const titres = (home.featured ?? []).map((f: { title: string }) => f.title);
+---
+
+{titres.length > 0 && (
+  <section class="kf-section">
+    <div class="kf-feuille">
+      <div class="kf-section__entete">
+        <h2 class="kf-section__titre">{SITE_CONFIG.ui.recentArticles}</h2>
+        <p class="kf-section__note">Rozbory, které právě čtete čtenáři.</p>
+      </div>
+
+      <div class="kf-liste-cote">
+        {titres.map((t: string, i: number) => (
+          <div class="kf-liste-cote__item">
+            <p class="kf-liste-cote__num">{String(i + 1).padStart(2, "0")}</p>
+            <p class="kf-liste-cote__titre">{t}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

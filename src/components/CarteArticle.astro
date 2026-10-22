@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from "astro:content";
+import CoverImage from "./CoverImage.astro";
+import { SITE_CONFIG, categoryLabel } from "../config";
+import { formatDate } from "../lib/live";
+
+interface Props {
+  href: string;
+  title: string;
+  excerpt?: string;
+  image?: string;
+  rubrique?: string;
+  slug?: string;
+  date?: Date;
+}
+
+const { href, title, excerpt, image, rubrique, slug, date } = Astro.props;
+const dateLabel = date ? formatDate(date, SITE_CONFIG.locale) : "";
+---
+
+<article class="kf-carte">
+  {image && (
+    <a class="kf-carte__vignette" href={href} tabindex="-1" aria-hidden="true">
+      <CoverImage src={image} alt="" loading="lazy" width={640} height={400} />
+    </a>
+  )}
+  <div class="kf-carte__corps">
+    {rubrique && <p class="kf-carte__rubrique">{rubrique}</p>}
+    <h3 class="kf-carte__titre"><a href={href}>{title}</a></h3>
+    {excerpt && <p class="kf-carte__extrait">{excerpt}</p>}
+    <div class="kf-carte__pied">
+      <span>{dateLabel}</span>
+      <span class="kf-carte__suite">{SITE_CONFIG.ui.readMore}</span>
+    </div>
+  </div>
+</article>

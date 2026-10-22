@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { SITE_TITLE, SITE_CONFIG, CATEGORIES } from "../config";
+---
+
+<Layout title={`Stránka nenalezena — ${SITE_TITLE}`} noindex={true}>
+  <div class="kf-feuille">
+    <section class="kf-404">
+      <p class="kf-code">Chyba 404</p>
+      <h1>Tento dokument tu není</h1>
+      <p class="kf-section__note" style="margin: 0 auto 1.6rem; max-width: 32rem;">
+        Adresa se změnila nebo dokument neexistuje. Zkuste přehled témat nebo
+        napište do redakce, pokud hledáte konkrétní výpočet.
+      </p>
+      <a class="kf-etiquette" href="/">{SITE_CONFIG.ui.home}</a>
+    </section>
+
+    <section class="kf-section">
+      <div class="kf-section__entete">
+        <h2 class="kf-section__titre">{SITE_CONFIG.ui.categories}</h2>
+      </div>
+      <div class="kf-rubriques">
+        {CATEGORIES.map((c) => (
+          <a class="kf-rubrique" href={`/category/${c.slug}/`}>
+            <p class="kf-rubrique__nom">{c.label}</p>
+            <p class="kf-rubrique__gain">{c.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout>

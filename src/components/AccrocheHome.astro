@@ -1,0 +1,42 @@
+---
+import { SITE_CONFIG } from "../config";
+
+const home = SITE_CONFIG.home ?? {};
+const h1 = home.hero_h1 ?? SITE_CONFIG.hero.title;
+const chapo = home.hero_chapo ?? SITE_CONFIG.hero.subtitle;
+const image = SITE_CONFIG.hero.image ?? "/images/accroche.jpg";
+---
+
+<section class="kf-accroche">
+  <div class="kf-feuille">
+    <div class="kf-accroche__grille">
+      <div>
+        <p class="kf-accroche__surtitre">{SITE_CONFIG.ui.categories} · 4 oblasti</p>
+        <h1>{h1}</h1>
+        <p class="kf-accroche__chapo">{chapo}</p>
+
+        {Array.isArray(home.audience) && home.audience.length > 0 && (
+          <ul class="kf-situations">
+            {home.audience.map((s: string) => (
+              <li class="kf-situations__item">{s}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      <figure class="kf-accroche__figure">
+        <img
+          src={image}
+          alt="Výplatní páska, úřední oznámení správy sociálního zabezpečení a výpis z bankovního účtu na pracovním stole"
+          width="1152"
+          height="864"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <figcaption>
+          Podklady podle kterých počítáme: výplatní páska, vyhlášky a úřední sdělení.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>

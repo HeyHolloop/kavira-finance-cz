@@ -1,0 +1,26 @@
+---
+import { SITE_CONFIG, SITE_PATHS } from "../config";
+
+const home = SITE_CONFIG.home ?? {};
+const lignes = String(home.proof_body ?? "")
+  .split("\n")
+  .map((l: string) => l.trim())
+  .filter(Boolean);
+---
+
+<section class="kf-section">
+  <div class="kf-feuille">
+    <div class="kf-preuve">
+      <div>
+        <p class="kf-code">Metodika</p>
+        <h2 class="kf-preuve__titre">{home.proof_title ?? SITE_CONFIG.ui.about}</h2>
+      </div>
+      <div class="kf-preuve__texte">
+        {lignes.map((l: string) => <p>{l}</p>)}
+        <p>
+          <a href={`/${SITE_PATHS.about}/`}>{SITE_CONFIG.ui.about} →</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

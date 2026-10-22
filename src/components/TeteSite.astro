@@ -1,0 +1,54 @@
+---
+import { SITE_CONFIG, CATEGORIES, SITE_PATHS } from "../config";
+
+const baseline =
+  SITE_CONFIG.home?.header_baseline ??
+  "Praktický průvodce výplatou, daněmi a rodinným rozpočtem v Česku";
+
+const chemin = Astro.url.pathname;
+const estAccueil = chemin === "/" || chemin === "";
+const catActive = chemin.startsWith("/category/");
+const slugActif = catActive ? chemin.split("/")[2] : "";
+---
+
+<header class="kf-tete">
+  <div class="kf-feuille">
+    <div class="kf-tete__barre">
+      <p class="kf-tete__baseline">{baseline}</p>
+      <nav class="kf-tete__liens" aria-label="Odkazy pro redakci">
+        <a href={`/${SITE_PATHS.about}/`}>{SITE_CONFIG.ui.about}</a>
+        <a href="/contact/">{SITE_CONFIG.ui.contact}</a>
+      </nav>
+    </div>
+
+    <div class="kf-tete__marque">
+      <a class="kf-masthead" href="/">{SITE_CONFIG.ui.masthead}</a>
+      <div class="kf-marque__droite">
+        <form class="kf-recherche" role="search" action="/hledat/">
+          <label class="kf-saut" for="kf-q">Hledat na webu</label>
+          <input
+            id="kf-q"
+            class="kf-recherche__champ"
+            type="search"
+            name="q"
+            placeholder="Hledat postup, sazbu nebo termín"
+            autocomplete="off"
+          />
+          <button class="kf-recherche__bouton" type="submit">Hledat</button>
+        </form>
+      </div>
+    </div>
+
+    <nav class="kf-nav" aria-label={SITE_CONFIG.ui.categories}>
+      <a href="/" aria-current={estAccueil ? "page" : undefined}>{SITE_CONFIG.ui.home}</a>
+      {CATEGORIES.map((c) => (
+        <a
+          href={`/category/${c.slug}/`}
+          aria-current={slugActif === c.slug ? "page" : undefined}
+        >
+          {c.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>

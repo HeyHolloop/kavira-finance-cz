@@ -1,0 +1,50 @@
+---
+import { SITE_TITLE, SITE_CONFIG, CATEGORIES, SITE_PATHS } from "../config";
+
+const charte = SITE_CONFIG.home?.footer_charte ?? "";
+const annee = new Date().getFullYear();
+---
+
+<footer class="kf-pied">
+  <div class="kf-feuille">
+    <div class="kf-pied__haut">
+      <div>
+        <p class="kf-pied__marque">{SITE_CONFIG.ui.masthead}</p>
+        <p class="kf-pied__charte">{charte}</p>
+      </div>
+
+      <div class="kf-pied__colonne">
+        <h3>{SITE_CONFIG.ui.categories}</h3>
+        <ul>
+          {CATEGORIES.map((c) => (
+            <li><a href={`/category/${c.slug}/`}>{c.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="kf-pied__colonne">
+        <h3>Redakce</h3>
+        <ul>
+          <li><a href={`/${SITE_PATHS.about}/`}>{SITE_CONFIG.ui.about}</a></li>
+          <li><a href="/contact/">{SITE_CONFIG.ui.contact}</a></li>
+          <li><a href={`/${SITE_PATHS.legal}/`}>{SITE_CONFIG.ui.legalNotice}</a></li>
+          <li><a href={`/${SITE_PATHS.privacy}/`}>{SITE_CONFIG.ui.privacyPolicy}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kf-pied__bas">
+      <div>
+        <p class="kf-pied__disclaimer">
+          Informace na tomto webu slouží pouze jako všeobecné informace a nenahrazují
+          individualizované finanční, daňové ani právní poradenství. Články v rubrice
+          Investice mají vzdělávací charakter a nejsou doporučením k nákupu konkrétního
+          investičního produktu ani investičním poradenstvím podle pravidel MiFID II
+          a zákona č. 229/2014 Sb. o dluhopisech.
+        </p>
+        <p>© {annee} {SITE_TITLE}</p>
+      </div>
+      <p>{SITE_CONFIG.contact_email}</p>
+    </div>
+  </div>
+</footer>

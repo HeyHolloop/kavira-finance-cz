@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { SITE_CONFIG, SITE_TITLE } from "../config";
+---
+
+<Layout title={SITE_CONFIG.ui.contact} description={`Napsat do redakce ${SITE_TITLE}.`}>
+  <div class="kf-feuille">
+    <section class="kf-inst">
+      <p class="kf-code">Kontakt</p>
+      <h1>{SITE_CONFIG.ui.contact}</h1>
+      <div class="kf-corps">
+        <p>
+          Napište nám, jestliže potřebujete dopočítat hodnotu na výplatní pásce,
+          ověřit termín nebo pochopit, jak se počítá nárok. Do zprávy prosím napište,
+          o jaký výpočet jde.
+        </p>
+        <p>
+          <strong>E-mail:</strong>
+          <a href={`mailto:${SITE_CONFIG.contact_email}`}>{SITE_CONFIG.contact_email}</a>
+        </p>
+        <div class="kf-cadre">
+          <p class="kf-cadre__titre">Pozor na podvodnou korespondenci</p>
+          <p>
+            Redakce nikdy nepožaduje platbu, přihlašovací údaje ani zaslání výplatní
+            pásky e-mailem. Finanční úřady, Česká správa sociálního zabezpečení ani
+            Česká národní banka se neozývají takto telefonicky ani písemně.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

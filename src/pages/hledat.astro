@@ -1,0 +1,127 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { SITE_TITLE, SITE_CONFIG } from "../config";
+---
+
+<Layout
+  title={`Hledat — ${SITE_TITLE}`}
+  description={`Hledání v archivu ${SITE_TITLE}: postupy, sazby a termíny.`}
+>
+  <div class="kf-feuille">
+    <section class="kf-rubrique-hero">
+      <p class="kf-code">Vyhledávání</p>
+      <h1>Hledat v archivu rozborech</h1>
+      <p>
+        Zadejte, co vás zajímá — postup, sazbu, výraz z výplatní pásky nebo úřední
+        termín. Vyhledávání běží přímo v prohlížeči přes názvy a úryvky článků.
+      </p>
+    </section>
+
+    <section class="kf-section">
+      <form class="kf-recherche kf-recherche--page" role="search" id="kf-search-form">
+        <label class="kf-saut" for="kf-q2">Co hledáte</label>
+        <input
+          id="kf-q2"
+          class="kf-recherche__champ"
+          type="search"
+          name="q"
+          placeholder="například sleva na dítě, minimální mzda, dohoda o provedení práce"
+          autocomplete="off"
+        />
+        <button class="kf-recherche__bouton" type="submit">Hledat</button>
+      </form>
+
+      <p class="kf-code" id="kf-search-count" style="margin-top: 1.6rem;">Hledání…</p>
+      <div id="kf-search-results" class="kf-grille" style="margin-top: 1rem;"></div>
+      <noscript>
+        <p class="kf-section__note">
+          Vyhledávání potřebuje JavaScript. Procházejte rubriky v menu nahoře nebo
+          <a href="/contact/">napište do redakce</a> — odpovíme do dvou pracovních dnů.
+        </p>
+      </noscript>
+    </section>
+  </div>
+
+  <script is:inline define:vars={{ searchLabel: SITE_CONFIG.ui.discover }}>
+    (function () {
+      var form = document.getElementById("kf-search-form");
+      var champ = document.getElementById("kf-q2");
+      var count = document.getElementById("kf-search-count");
+      var results = document.getElementById("kf-search-results");
+      var index = null;
+
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+      }
+
+      function normalise(s) {
+        return String(s)
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+      }
+
+      function render(q) {
+        if (!index) return;
+        var needle = normalise(q).trim();
+        if (needle.length < 2) {
+          count.textContent = "Zadejte alespoň dvě písmena.";
+          results.innerHTML = "";
+          return;
+        }
+        var terms = needle.split(/\s+/).filter(Boolean);
+        var hits = index.filter(function (r) {
+          var hay = normalise(r.t + " " + r.e + " " + r.r);
+          return terms.every(function (t) {
+            return hay.indexOf(t) !== -1;
+          });
+        });
+        count.textContent = hits.length === 0
+          ? "Pro zadání „" + q + "“ jsme nic nenašli."
+          : hits.length + (hits.length === 1 ? " výsledek" : hits.length < 5 ? " výsledky" : " výsledků");
+        results.innerHTML = hits.map(function (r) {
+          return (
+            '<article class="kf-carte"><div class="kf-carte__corps">' +
+            '<p class="kf-carte__rubrique">' + escapeHtml(r.r) + "</p>" +
+            '<h3 class="kf-carte__titre"><a href="' + escapeHtml(r.u) + '">' + escapeHtml(r.t) + "</a></h3>" +
+            '<p class="kf-carte__extrait">' + escapeHtml(r.e) + "</p>" +
+            '<div class="kf-carte__pied"><span>' + escapeHtml(r.d) + "</span></div>" +
+            "</div></article>"
+          );
+        }).join("");
+      }
+
+      function load() {
+        if (index) return;
+        fetch("/search-index.json")
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            index = data;
+            render(champ.value);
+          })
+          .catch(function () {
+            count.textContent = "Index se nepodařilo načíst. Obnovte stránku.";
+          });
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var q = champ.value.trim();
+        history.replaceState(null, "", q ? "/hledat/?q=" + encodeURIComponent(q) : "/hledat/");
+        load();
+      });
+
+      champ.addEventListener("input", function () {
+        load();
+        render(champ.value);
+      });
+
+      var params = new URLSearchParams(window.location.search);
+      var initial = params.get("q") || "";
+      champ.value = initial;
+      load();
+    })();
+  </script>
+</Layout>

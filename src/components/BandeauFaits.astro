@@ -1,0 +1,19 @@
+---
+import { SITE_CONFIG } from "../config";
+
+const facts = SITE_CONFIG.facts ?? [];
+---
+
+{facts.length > 0 && (
+  <section class="kf-faits" aria-label="Čísla z oficiálních zdrojů">
+    {facts.map((f: { claim: string; valeur: string; autorite: string; url: string; date: string }) => (
+      <div class="kf-fait">
+        <p class="kf-fait__valeur">{f.valeur}</p>
+        <p class="kf-fait__claim">{f.claim}</p>
+        <a class="kf-fait__source" href={f.url} rel="dofollow noopener" target="_blank">
+          {f.autorite} · {f.date}
+        </a>
+      </div>
+    ))}
+  </section>
+)}

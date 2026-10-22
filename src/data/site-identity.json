@@ -1,0 +1,168 @@
+{
+  "site_title": "Kavira Finance",
+  "site_url": "https://www.kavira-finance.cz",
+  "site_description": "Praktický průvodce výplatní páskou, pracovními smlouvami, daněmi a rodinným rozpočtem v České republice.",
+  "locale": "cs-CZ",
+  "paths": {
+    "about": "o-redakci",
+    "legal": "pravni-dolozka",
+    "privacy": "zasady-nakladani-s-udaji"
+  },
+  "contact_email": "redakce@kavira-finance.cz",
+  "legal": {
+    "editor_name": "Kavira Finance",
+    "publication_director": "Redakce Kavira Finance",
+    "host": "o2switch, Chemin des Pardiaux, 63000 Clermont-Ferrand"
+  },
+  "author": {
+    "name": "Redakce Kavira Finance",
+    "role": "Mzdová a finanční redakce",
+    "avatar": "",
+    "bio": "Redakce Kavira Finance připravuje věcné přehledy zaměřené na pracovní smlouvy, mzdové nároky, daňová přiznání a bezpečné spoření. Všechna témata opíráme o aktuální znění zákoníku práce, metodické pokyny Finanční správy ČR, předpisy České národní banky a postupy České správy sociálního zabezpečení. Neposkytujeme individuální finanční poradenství ani neprodáváme komerční produkty."
+  },
+  "hero": {
+    "title": "Vyznat se ve výplatní pásce, smlouvách a daních",
+    "subtitle": "Pomáháme zaměstnancům i rodinám zkontrolovat čistou mzdu, uplatnit zákonné slevy a pohlídat důležité úřední termíny.",
+    "image": "/images/accroche.jpg"
+  },
+  "home": {
+    "header_baseline": "Praktický průvodce výplatou, daněmi a rodinným rozpočtem v Česku",
+    "hero_h1": "Vyznat se ve výplatní pásce, smlouvách a daních",
+    "hero_chapo": "Pomáháme zaměstnancům i rodinám zkontrolovat čistou mzdu, uplatnit zákonné slevy a pohlídat důležité úřední termíny. Najdete zde srozumitelné návody k pracovním smlouvám, sociálním dávkám i rodinnému spoření.",
+    "audience": [
+      "Zaměstnanec, který dostal novou výplatní pásku a potřebuje zjistit, proč má nižší čistou mzdu.",
+      "Rodič, který zjišťuje nárok na příspěvky a hledá správný postup při uplatnění daňových slev.",
+      "Pracovník na dohodu, který potřebuje ověřit limity pro platbu sociálního a zdravotního pojištění."
+    ],
+    "sections_title": "Témata podle vaší situace",
+    "sections": [
+      {
+        "label": "Osobní finance",
+        "benefit": "Spočítejte si čistý příjem, zkontrolujte položky na výplatním lístku a využijte všechny dostupné slevy na dani z příjmů."
+      },
+      {
+        "label": "Investice",
+        "benefit": "Porovnejte poplatky u spořicích účtů, fondů i penzijka a chraňte své úspory před vlivem inflace."
+      },
+      {
+        "label": "Kariéra & Vzdělávání",
+        "benefit": "Zkontrolujte si znění pracovní smlouvy, spočítejte nárok na dovolenou a pohlídejte zákonné příplatky za směny."
+      },
+      {
+        "label": "Podnikání & Byznys",
+        "benefit": "Ověřte si pravidla paušální daně, pohlídejte termíny pro podání přehledů a vyřešte fakturaci bez zbytečných pokut."
+      }
+    ],
+    "proof_title": "Ověřené postupy a zdroje",
+    "proof_body": "Články připravuje redakční tým se zkušenostmi ze mzdového účetnictví a daňové administrativy.\nVycházíme přímo z platného znění zákonů, ministerských vyhlášek a úředních metodik.\nVšechny výpočty i termíny ověřujeme podle aktuálních předpisů a neprodáváme finanční poradenství.\nKaždý rozbor upravujeme při změnách zákonných sazeb, minimální mzdy a oficiálních formulářů.",
+    "featured": [
+      {
+        "title": "Chyba na výplatní pásce: jak reklamovat špatně spočítanou čistou mzdu u zaměstnavatele"
+      },
+      {
+        "title": "Práce na DPP a DPČ: kdy vzniká povinnost platit sociální a zdravotní pojištění"
+      },
+      {
+        "title": "Sleva na vyživované dítě: jak správně doložit potvrzení druhého z rodičů"
+      },
+      {
+        "title": "Výpověď z pracovního poměru: jak spočítat odstupné a běh výpovědní doby"
+      }
+    ],
+    "footer_charte": "Věcné finanční a pracovněprávní informace ověřené podle platných zákonů."
+  },
+  "tools": {
+    "title": "Kde hledat úřední odpověď",
+    "lead": "Každé téma má svůj úřední zdroj. Odkazujeme na ně místo citací z blogů.",
+    "items": [
+      "ČSSZ",
+      "Finanční správa",
+      "ČNB",
+      "MPSV",
+      "ePortál"
+    ]
+  },
+  "ui_strings": {
+    "readMore": "Otevřít podrobný rozbor",
+    "publishedBy": "Zpracovala",
+    "alsoRead": "Související praktické postupy",
+    "aboutAuthor": "O redakci Kavira Finance",
+    "latestArticles": "Poslední zpracovaná témata",
+    "mostReadArticles": "Nejčastěji řešené otázky",
+    "recentArticles": "Nedávno aktualizované přehledy",
+    "home": "Přehled témat",
+    "about": "Metodika a zdroje redakce",
+    "contact": "Napsat do redakce",
+    "categories": "Rubriky",
+    "legalNotice": "Právní doložka a odpovědnost",
+    "privacyPolicy": "Zásady nakládání s údaji",
+    "discover": "Zobrazit všechny přehledy",
+    "newContentComing": "Další rozbory a kalkulace připravujeme.",
+    "breadcrumbAria": "Navigační stopa",
+    "masthead": "Kavira Finance",
+    "skipToContent": "Přejít k obsahu"
+  },
+  "categories": [
+    {
+      "label": "Osobní finance",
+      "slug": "osobni-finance",
+      "description": "Výplatní páska, daň z příjmů, slevy, dávky a rodinný rozpočet.",
+      "hero_title": "Osobní finance",
+      "seo_intro": "Rozkládáme výplatní pásku na jednotlivé řádky, počítáme čistou mzdu, slevy na dani a nároky z pojištění. Každý výpočet ukazujeme krok za krokem."
+    },
+    {
+      "label": "Investice",
+      "slug": "investice",
+      "description": "Spoření, poplatky, inflace a regulované finanční produkty bez slibů výnosu.",
+      "hero_title": "Investice",
+      "seo_intro": "Porovnáváme poplatky, sledujeme inflaci a vysvětlujeme, jak fungují regulované produkty. Texty jsou vzdělávací a nenahradí investiční poradenství."
+    },
+    {
+      "label": "Kariéra & Vzdělávání",
+      "slug": "kariera-a-vzdelavani",
+      "description": "Pracovní smlouva, dovolená, příplatky a zaměstnanecké vztahy.",
+      "hero_title": "Kariéra & Vzdělávání",
+      "seo_intro": "Čteme smlouvy místo vás: zkušební doba, dovolená, příplatky za noční a víkendovou práci, výpověď a odstupné."
+    },
+    {
+      "label": "Podnikání & Byznys",
+      "slug": "podnikani-a-byznys",
+      "description": "Paušální daň, přehledy, fakturace a termíny pro OSVČ a malé firmy.",
+      "hero_title": "Podnikání & Byznys",
+      "seo_intro": "Přehledy, paušální daň, faktury a splatnosti pro živnostníky a malé firmy. Všechny termíny navazujeme na oficiální daňový kalendář."
+    }
+  ],
+  "facts": [
+    {
+      "claim": "Minimální měsíční mzda pro rok 2026 při týdenní pracovní době 40 hodin",
+      "valeur": "22 400 Kč",
+      "autorite": "Ministerstvo práce a sociálních věcí",
+      "url": "https://ppropo.mpsv.cz/xviii1minimalnimzdaanejnizsiurov",
+      "date": "2025-09"
+    },
+    {
+      "claim": "Minimální měsíční výše starobního důchodu přiznaného v roce 2026",
+      "valeur": "9 800 Kč",
+      "autorite": "Česká správa sociálního zabezpečení",
+      "url": "https://www.cssz.cz/duchodova-kalkulacka",
+      "date": "2026"
+    },
+    {
+      "claim": "Životní minimum pro samostatně žijící osobu od 1. října 2026",
+      "valeur": "5 500 Kč",
+      "autorite": "Ministerstvo práce a sociálních věcí",
+      "url": "https://mpsv.cz/en/living-and-subsistence-minimum",
+      "date": "2026-10"
+    },
+    {
+      "claim": "Splatnost odvodu sražených záloh na daň z příjmů ze závislé činnosti za září 2026",
+      "valeur": "20. 10. 2026",
+      "autorite": "Finanční správa",
+      "url": "https://financnisprava.gov.cz/cs/dane/dane/dan-z-prijmu/fyzicke-osoby/obecne-informace/danovy-kalendar.aspx?month=10&year=2026",
+      "date": "2026-10"
+    }
+  ],
+  "aboutBody": "<h2>Proč většina finančních článků v Česku nepomáhá</h2>\n<p>Běžné texty o penězích na českém internetu často pouze přepisují reklamní tiskové zprávy úvěrových společností nebo citují nesrozumitelnou právní hantýrku. Zaměstnanec, který drží v ruce výplatní pásku a snaží se pochopit, proč mu po změně daňových slev přišlo na účet méně peněz, se v nich konkrétní odpovědi nedočká. Místo jasných výpočtů a odkazu na konkrétní paragraf zákoníku práce naráží na obecné rady o pasivním příjmu.</p>\n<h2>Důvod vzniku Kavira Finance</h2>\n<p>Kavira Finance vznikla jako věcný nástroj pro každodenní orientaci v českém finančním a pracovním systému. Převádíme novelizace zákonů, daňové balíčky a změny v nemocenském pojištění do konkrétních příkladů a srozumitelných čísel. Vysvětlujeme, jak správně podepsat prohlášení poplatníka k dani, co přesně hlídat při zkušební době u smlouvy na dobu neurčitou a jak pracovat s novým Dlouhodobým investičním produktem (DIP) bez marketingového zkreslení.</p>\n<h2>Zdroje a způsob ověřování informací</h2>\n<p>Každý publikovaný návod stavíme výhradně na primárních datech veřejné správy. Čerpáme ze Sbírky zákonů, metodických pokynů Generálního finančního ředitelství, vyhlášek MPSV, úředních sdělení České národní banky a formulářů na ePortálu ČSSZ. Redakce samostatně přepočítává redukční hranice pro výpočet nemocenské i náhrady mzdy a každé uvedené číslo kontroluje podle parametrů platných pro aktuální kalendářní rok.</p>\n<h2>Přísně vymezený okruh témat</h2>\n<p>Věnujeme se pouze čtyřem oblastem: osobním financím, obecnému vzdělávání o investicích, kariéře se vzděláváním a praktickým otázkám drobného podnikání. Zásadně se vyhýbáme denním spekulacím na akciových trzích, doporučením ke koupi konkrétních cenných papírů, propagaci rizikových kryptoměnových schémat i recenzím pochybných nebankovních půjček.</p>\n<h2>Komu sloužíme a jak opravujeme chyby</h2>\n<p>Píšeme pro zaměstnance, kteří potřebují zkontrolovat správnost své výplatní pásky, pro rodiny řešící rodičovský příspěvek, pro začínající OSVČ i pro každého, kdo chce ochránit své úspory před inflací v rámci regulovaných nástrojů. Naše texty nenahrazují individuální právní, daňové ani investiční poradenství ve smyslu pravidel ČNB a MiFID II. Dojde-li ke změně zákonných sazeb nebo úředního výkladu, texty bez odkladu opravujeme a v záhlaví uvádíme datum poslední revize.</p>",
+  "legalBody": "<p>Poslední úprava: 22. října 2026.</p>\n<p>\n  Vítejte na <strong>Kavira Finance</strong>. Prohlížením tohoto webu (dostupného na adrese\n  www.kavira-finance.cz) přijímáte tyto podmínky užívání.\n</p>\n<p>Pokud s nimi nesouhlasíte, přestaňte web používat.</p>\n\n<h2>1. Předmět webu</h2>\n<p>\n  Kavira Finance je informační web o osobních financích, daních, zaměstnaneckých\n  vztazích a obecném vzdělávání o investicích v České republice. Obsahem jsou\n  výklady zákoníku práce, metodických pokynů Finanční správy, vyhlášek MPSV,\n  sdělení České národní banky a postupů České správy sociálního zabezpečení.\n</p>\n<p>\n  Obsah je bezplatný a poskytovaný pouze za účelem informace. Web neprovozuje\n  poradenskou kancelář, neposkytuje osobní finanční, daňové ani právní poradenství,\n  nevytváří a neprodává vlastní finanční produkty a neprovádí zprostředkování\n  investičních služeb.\n</p>\n\n<h2>2. Přístup k webu</h2>\n<p>Přístup je bezplatný. Poplatky za internetové připojení a vybavení zůstávají na uživateli.</p>\n<p>\n  Snažíme se udržet web dostupný. Mohou se vyskytnout výpadky (údržba, technický\n  incident). Za dočasnou nedostupnost neneseme odpovědnost.\n</p>\n\n<h2>3. Duševní vlastnictví</h2>\n<p>\n  Obsah publikovaný na Kavira Finance (texty, fotografie, grafika) je chráněn právem\n  k duševnímu vlastnictví. Jakékoliv kopírování, úpravy, distribuce nebo další\n  užívání bez předchozího souhlasu je zakázáno. Uvedené značky patří jejich\n  vlastníkům. Web není s těmito značkami affiliate.\n</p>\n\n<h2>4. Odpovědnost za obsah</h2>\n<p>\n  <strong>Obsah publikovaný:</strong> Informace se mohou měnit. Nezaručujeme\n  neexistenci chyb, opomenutí ani textu, který se stal neaktuálním. U každého\n  rozboru uvádíme datum poslední revize.\n</p>\n<p>\n  <strong>Odborné poradenství:</strong> Článek nezná Vaši situaci. Před rozhodnutím\n  (podání přiznání, ukončení pracovního poměru, podnikání, spor) se poraďte s\n  kvalifikovaným odborníkem, například s daňovým poradcem, advokátem nebo\n  mzdovou účetní.\n</p>\n<p>\n  <strong>Investiční texty:</strong> Články v rubrice Investice mají vzdělávací\n  charakter. Nejsou doporučením k nákupu konkrétního investičního produktu ani\n  investičním poradenstvím podle zákona č. 229/2014 Sb. o dluhopisech a směrnice\n  MiFID II.\n</p>\n<p>\n  <strong>Odkazy na externí weby:</strong> web může odkazovat na stránky třetích\n  stran. Tyto stránky nekontrolujeme a za jejich obsah neneseme odpovědnost.\n</p>\n<p>\n  <strong>Užívání webu:</strong> zavazujete se webem nenarušovat a nepoužívat texty\n  k nelegálním účelům.\n</p>\n\n<h2>5. Ochrana osobních údajů</h2>\n<p>\n  Podrobný popis zpracování je uveden na stránce\n  <a href=\"/zasady-nakladani-s-udaji/\">Zásady nakládání s údaji</a>.\n</p>\n<p>\n  <strong>Cookies:</strong> web nepoužívá cookie pro měření návštěvnosti ani\n  reklamní cookie.\n</p>\n<p>Kontakt: redakce@kavira-finance.cz</p>\n\n<h2>6. Hosting</h2>\n<p>Web je hostován u:</p>\n<p>\n  <strong>Poskytovatel hostingu:</strong> o2switch, Chemin des Pardiaux, 63000\n  Clermont-Ferrand.<br />\n  <strong>Telefon:</strong> +33 4 44 44 60 40.\n</p>\n\n<h2>7. Změny podmínek</h2>\n<p>\n  Podmínky mohou být měněny. Platí je verze zveřejněná na této stránce.\n</p>\n\n<h2>8. Informace o provozovateli</h2>\n<p>Web <strong>Kavira Finance</strong> vydává:</p>\n<ul>\n  <li><strong>Obchodní firma:</strong> OVELIUM</li>\n  <li><strong>Právní forma:</strong> společnost s ručením omezeným (EURL)</li>\n  <li><strong>Základní kapitál:</strong> 100,00 €</li>\n  <li><strong>Sídlo:</strong> 254 Rue Vendôme, 69003 Lyon</li>\n  <li><strong>IČO:</strong> 101 370 823 R.C.S. Lyon</li>\n  <li><strong>DIČ:</strong> FR21101370823</li>\n  <li><strong>Šéfredaktor a odpovědný za obsah:</strong> Lomig LE MANAC'H, jednatel</li>\n</ul>\n<p><strong>E-mailová adresa:</strong> redakce@kavira-finance.cz</p>\n\n<h2>9. Redakční podpis</h2>\n<p>\n  Články jsou podepsány Redakcí Kavira Finance. Za obsah zodpovídá\n  Lomig LE MANAC'H.\n</p>\n\n<h2>10. Rozhodný právo a příslušnost soudů</h2>\n<p>\n  Tyto podmínky se řídí právem České republiky. O sporech rozhodne věcně a místně\n  příslušný soud v České republice.\n</p>\n",
+  "privacyBody": "<p>Poslední úprava: 22. října 2026.</p>\n<p>\n  Tato zásady popisuje, jak <strong>Kavira Finance</strong> (provozovaná společností\n  OVELIUM, EURL zapsanou v obchodním rejstříku v Lyonu pod číslem 101 370 823)\n  shromažďuje, používá a chrání informace, které jí předáte při používání webu\n  www.kavira-finance.cz.\n</p>\n<p>\n  Vztahuje se na všechny stránky webu. Neexistuje zde uživatelský účet, newsletter\n  ani formulář pro přihlášení. Jediným dobrovolným sběrem dat je e-mail, který nám\n  zašlete.\n</p>\n\n<h2>1. Správce údajů</h2>\n<p>\n  <strong>Správce údajů:</strong> OVELIUM, EURL se základním kapitálem 100,00 €, se\n  sídlem 254 Rue Vendôme, 69003 Lyon.<br />\n  <strong>Šéfredaktor:</strong> Lomig LE MANAC'H, jednatel.<br />\n  <strong>Kontakt:</strong> redakce@kavira-finance.cz\n</p>\n\n<h2>2. Jaké údaje zpracováváme</h2>\n<p>\n  Kavira Finance zpracovává pouze údaje nezbytné pro fungování webu a pro odpověď\n  na vaše zprávy.\n</p>\n<ul>\n  <li>\n    <strong>Kontaktní údaje:</strong> když píšete na\n    redakce@kavira-finance.cz, zpracováváme vaši e-mailovou adresu a obsah zprávy.\n  </li>\n  <li>\n    <strong>Technické údaje o připojení:</strong> serverové logy (IP adresa,\n    časové razítko, požadované stránky, typ prohlížeče), které vytváří poskytovatel\n    hostingu za účelem zabezpečení a fungování webu. Tyto logy se nepoužívají\n    k reklamě.\n  </li>\n</ul>\n<p>\n  Nejsou vyžadovány žádné citlivé údaje (etnický původ, politické názory, zdraví a\n  podobně). Newsletter nerozšiřujeme. Data neprodáváme ani nepronajímáme.\n</p>\n\n<h2>2. Právní základ a účely zpracování</h2>\n<ul>\n  <li>\n    <strong>Odpověď na vaše zprávy</strong> (právní základ: oprávněný zájem, případně\n    opatření před uzavřením smlouvy, pokud se zpráva týká smluvního vztahu).\n  </li>\n  <li>\n    <strong>Zabezpečení webu</strong> a uchování připojovacích stop (právní základ:\n    oprávněný zájem a zákonná povinnost).\n  </li>\n</ul>\n\n<h2>3. Cookies</h2>\n<p>\n  <strong>Cookie</strong> je malý textový soubor uložený v terminálu při návštěvě\n  webu.\n</p>\n<p>\n  Kavira Finance <strong> nepoužívá cookie pro měření návštěvnosti</strong>\n  (zejména žádný Google Analytics) ani reklamní cookie. Nenzobrazuje se souhlasný\n  banner, protože zde není žádný sledovací prvek.\n</p>\n<ul>\n  <li>\n    <strong>Případné čistě technické cookie:</strong> pouze ty, které jsou nezbytné\n    pro fungování webu, hostingu nebo bezpečnostního relé. Neslouží k profilování.\n  </li>\n</ul>\n<p>\n  Cookies můžete v prohlížeči zablokovat nebo smazat. Čtení článků tím zpravidla\n  není ovlivněno.\n</p>\n\n<h2>4. Doba uchovávání</h2>\n<ul>\n  <li><strong>Přijaté e-maily:</strong> 3 roky od poslední výměny zpráv.</li>\n  <li><strong>Logy připojení:</strong> 1 rok.</li>\n</ul>\n\n<h2>5. Předávání třetím stranám</h2>\n<p>\n  Kavira Finance vaše data neprodává ani nepronajímá. Mohou být předána\n  zpracovatelům výhradně za účelem provozu webu:\n</p>\n<ul>\n  <li>\n    <strong>Poskytovatel hostingu:</strong> o2switch, Chemin des Pardiaux, 63000\n    Clermont-Ferrand (uložení dat v Evropské unii).\n  </li>\n  <li>\n    <strong>Relé a zabezpečení:</strong> Cloudflare, Inc., 101 Townsend Street,\n    San Francisco, CA 94107, USA. Cloudflare zprostředkovává provoz a zpracovává\n    údaje o připojení (IP adresa, požadovaná stránka, typ prohlížeče) za účelem\n    doručení a zabezpečení webu. Bez reklamy. Právní základ: oprávněný zájem.\n    Předání mimo EU: rámec EU-U.S. Data Privacy Framework a standardní smluvní\n    doložky. Zobrazovaná e-mailová adresa je v kódu stránky zakódována a pro\n    návštěvníka se rozlušuje až v jeho prohlížeči. Nejde o sledovací prvek.\n  </li>\n</ul>\n<p>\n  Tito zpracovatelé jsou vázáni závazkami mlčenlivosti a bezpečnosti odpovídajícími\n  GDPR.\n</p>\n\n<h2>6. Předání mimo Evropskou unii</h2>\n<p>\n  Web je hostován v Evropské unii (o2switch, Francie). Nenasazujeme nástroj pro\n  měření návštěvnosti typu Google Analytics. Bezpečnostní relé Cloudflare může\n  zpracovávat údaje o připojení mimo Evropskou unii. Toto předání se opírá o rámec\n  EU-U.S. Data Privacy Framework a standardní smluvní doložky.\n</p>\n\n<h2>7. Vaše práva</h2>\n<p>\n  V souladu s GDPR a českým zákonem č. 110/2019 Sb. máte právo:\n</p>\n<ul>\n  <li><strong>právo na přístup</strong> — získat potvrzení, že jsou vaše údaje zpracovávány, a jejich kopii;</li>\n  <li><strong>právo na opravu</strong> — opravit nepřesné nebo neúplné údaje;</li>\n  <li><strong>právo na výmaz</strong> — požádat o smazání údajů, s výjimkou případů, kdy jsme povinni je uchovat;</li>\n  <li><strong>právo na omezení zpracování</strong> — dočasně pozastavit zpracování;</li>\n  <li><strong>právo na přenosnost</strong> — získat údaje, které jste nám poskytli, ve strukturovaném formátu, pokud se tento právo uplatní;</li>\n  <li><strong>právo na vznesení námitky</strong> — proti zpracování založenému na oprávněném zájmu.</li>\n</ul>\n<p>\n  Pro uplatnění těchto práv nám napište na\n  <strong>redakce@kavira-finance.cz</strong>. Odpovídáme do jednoho měsíce od\n  obdržení žádosti.\n</p>\n<p>\n  Pokud po kontaktu usoudíte, že vaše práva nejsou respektována, můžete podat\n  stížnost k <strong>Úřadu pro ochranu osobních údajů</strong>, Přemyslova\n  náměstí 20, 110 15 Praha 1, nebo k příslušnému dozorovému orgánu v místě vašeho\n  bydliště či pracoviště.\n</p>\n\n<h2>8. Zabezpečení</h2>\n<p>\n  Opatření: šifrování HTTPS, hostování u o2switch, omezený přístup k přijatým\n  zprávám, zálohy. Žádný způsob přenosu není stoprocentně bezpečný.\n</p>\n\n<h2>9. Změny</h2>\n<p>\n  Tato zásada může být upravena podle změn zákona nebo techniky. Každá změna je\n  zveřejněna na této stránce s datem poslední úpravy.\n</p>\n\n<h2>10. Kontakt</h2>\n<p>\n  Kavira Finance / OVELIUM<br />\n  254 Rue Vendôme, 69003 Lyon<br />\n  redakce@kavira-finance.cz\n</p>\n"
+}

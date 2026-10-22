@@ -1,0 +1,259 @@
+/* Kavira Finance — article-blocks skin.
+   Préfixe "kv". Nuclear pose les classes ; ce fichier leur donne le dessin.
+   Tiré du DESIGN.md de ce média : registre administratif, papier de registre,
+   filet 1px, encre carbonée. Pas d'ombre floue, pas de pill, pas de dégradé. */
+
+.kv-corps ul, .kv-prose ul, .kv-texte ul { list-style: disc; margin: 0 0 1.2rem; padding-left: 1.5rem; }
+.kv-corps ol, .kv-prose ol, .kv-texte ol { list-style: decimal; margin: 0 0 1.2rem; padding-left: 1.5rem; }
+.kv-corps li, .kv-prose li, .kv-texte li { display: list-item; margin: 0 0 0.45rem; padding: 0; line-height: 1.68; }
+.kv-corps ul ul, .kv-prose ul ul, .kv-texte ul ul { list-style: circle; margin-bottom: 0.35rem; }
+.kv-corps li::marker, .kv-prose li::marker { color: #9e4a28; }
+
+.kv-prose h3 {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.24rem;
+  font-weight: 600;
+  margin: 1.8rem 0 0.65rem;
+  color: #111a15;
+}
+.kv-prose > p:first-of-type {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.28rem;
+  line-height: 1.52;
+  margin-bottom: 1.45rem;
+  color: #111a15;
+}
+
+/* Encadré de calcul : la cellule verrouillée du registre */
+.kv-shell { margin: 0 0 2.25rem 0; }
+.kv-shell__inner {
+  background: #f4f4ee;
+  color: #111a15;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid #2d3a32;
+  border-left: 3px solid #1b382b;
+}
+.kv-shell .kv-kicker {
+  margin: 0 0 0.7rem 0;
+  color: #1b382b;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.kv-verdict {
+  margin: 0;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.24rem;
+  line-height: 1.45;
+  color: #111a15;
+}
+.kv-texte { margin: 1.05rem 0 0 0; color: #111a15; line-height: 1.7; }
+.kv-texte p { margin: 0 0 0.75rem 0; }
+.kv-source { margin: 1.3rem 0 0 0; font-size: 0.78rem; color: #606c64; }
+.kv-source a { color: #1b5e9e; text-decoration: underline; }
+
+/* Tableau de registre : en-tête pleine ligne, lignes alternées, chiffres alignés */
+.kv-table-wrap {
+  overflow-x: auto;
+  margin: 0 0 2.25rem 0;
+  border: 1px solid #2d3a32;
+  background: #fbfbf7;
+}
+.kv-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.kv-table th {
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  background: #f4f4ee;
+  border-bottom: 1px solid #2d3a32;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #111a15;
+  white-space: nowrap;
+}
+.kv-table td {
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid #e2e2d8;
+  color: #111a15;
+  font-variant-numeric: tabular-nums;
+}
+.kv-table tbody tr:nth-child(even) td { background: #f7f7f2; }
+.kv-table td:last-child, .kv-table th:last-child { text-align: right; font-weight: 600; }
+.kv-table .kv-total td {
+  border-bottom: 3px double #111a15;
+  font-weight: 700;
+  background: #f4f4ee !important;
+}
+
+/* Frise des termínů : la colonne des échéances */
+.kv-timeline { margin: 0 0 2.25rem 0; }
+.kv-timeline__row {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0 0 1.05rem 0;
+  align-items: flex-start;
+  position: relative;
+}
+.kv-timeline__row:last-child { padding-bottom: 0; }
+.kv-timeline__row:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 0.85rem;
+  top: 1.5rem;
+  bottom: 0;
+  width: 1px;
+  background: #c2c8c2;
+}
+.kv-timeline__num {
+  position: relative;
+  z-index: 1;
+  min-width: 1.7rem;
+  color: #9e4a28;
+  font-weight: 800;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+.kv-timeline__text { color: #111a15; margin: 0.1rem 0 0 0; }
+
+/* Liste de contrôle : la case cochée du formulaire officiel */
+ul.kv-checklist {
+  list-style: disc;
+  margin: 0 0 2.25rem 0;
+  padding: 1.4rem 1.4rem 1.25rem 2.4rem;
+  background: #f4f4ee;
+  border: 1px solid #2d3a32;
+  border-left: 3px solid #1b382b;
+  color: #111a15;
+}
+.kv-checklist li { display: list-item; margin: 0 0 0.5rem 0; padding: 0; line-height: 1.62; }
+.kv-checklist li:last-child { margin-bottom: 0; }
+
+/* Renvoi encadré : l'avertissement au wax rouge */
+.kv-callout {
+  margin: 1.75rem 0;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid #2d3a32;
+  border-left: 3px solid #1b382b;
+  background: transparent;
+  color: #111a15;
+}
+.kv-callout--warn { border-left-color: #9e4a28; background: #fbede7; }
+
+/* FAQ : la question en gras, la réponse dessous */
+.kv-faq { margin: 0 0 1.7rem 0; }
+.kv-faq h3 {
+  margin: 0 0 0.4rem 0;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111a15;
+}
+.kv-faq p { margin: 0; color: #111a15; }
+
+/* Bloc « l'essentiel » : l'en-tête de schedule */
+.kv-essentials {
+  margin: 0 0 2.25rem 0;
+  padding: 1.4rem 1.5rem;
+  background: #f4f4ee;
+  color: #111a15;
+  border: 1px solid #2d3a32;
+}
+.kv-essentials__title {
+  margin: 0 0 0.7rem 0;
+  color: #111a15;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.22rem;
+  font-weight: 600;
+}
+.kv-essentials__list { margin: 0; padding-left: 1.35rem; list-style: disc; }
+.kv-essentials__list li { display: list-item; margin: 0 0 0.4rem; }
+
+/* Tampon de vérification : le sceau administratif */
+.kv-stamp {
+  display: inline-block;
+  border: 1.5px solid #1b382b;
+  color: #1b382b;
+  background: transparent;
+  padding: 2px 6px;
+  border-radius: 0;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transform: rotate(-1.2deg);
+}
+.kv-stamp--alerte { border-color: #9e4a28; color: #9e4a28; background: rgba(158, 74, 40, 0.05); }
+
+.kv-widget-spec { display: none; }
+.kv-infographie { margin: 0 0 2.25rem 0; }
+.kv-infographie__img { width: 100%; height: auto; display: block; border: 1px solid #2d3a32; }
+.kv-infographie:has(.kv-infographie__img) .kv-infographie__texts { display: none; }
+
+/* Simulateur : formulaire de registre, pas de carte SaaS */
+.kv-simulator {
+  border: 1px solid #2d3a32;
+  background: #f4f4ee;
+  padding: 1.4rem;
+  margin: 0 0 2.25rem 0;
+}
+.kv-simulator__title {
+  margin: 0 0 1rem 0;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111a15;
+}
+.kv-simulator label {
+  display: block;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #606c64;
+  margin: 0 0 0.35rem;
+}
+.kv-simulator input, .kv-simulator select {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #2d3a32;
+  border-radius: 2px;
+  background: #ffffff;
+  color: #111a15;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 0.9rem;
+}
+.kv-simulator input:focus, .kv-simulator select:focus { outline: 1.5px solid #1b382b; outline-offset: 0; }
+.kv-simulator button {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #111a15;
+  border-radius: 2px;
+  background: #1b382b;
+  color: #fbfbf7;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.kv-simulator button:hover { background: #111a15; }
+.kv-simulator__result {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  background: #fbfbf7;
+  border: 1px solid #2d3a32;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.15rem;
+  color: #111a15;
+}
+.kv-simulator__result:empty { display: none; }

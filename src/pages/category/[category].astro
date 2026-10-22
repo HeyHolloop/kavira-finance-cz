@@ -1,0 +1,72 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import CarteArticle from "../../components/CarteArticle.astro";
+import { CATEGORIES, SITE_TITLE, SITE_CONFIG } from "../../config";
+import { liveArticles } from "../../lib/live";
+
+export async function getStaticPaths() {
+  const posts = liveArticles(await getCollection("articles"));
+  return CATEGORIES.map((c) => ({
+    params: { category: c.slug },
+    props: {
+      rubrique: c,
+      posts: posts.filter((p) => p.data.categorySlug === c.slug),
+    },
+  }));
+}
+
+const { rubrique, posts } = Astro.props;
+const heroTitle = rubrique.hero_title || rubrique.label;
+const seoIntro = rubrique.seo_intro || rubrique.description || "";
+const others = CATEGORIES.filter((c) => c.slug !== rubrique.slug).slice(0, 4);
+---
+
+<Layout title={heroTitle} description={seoIntro}>
+  <div class="kf-feuille">
+    <section class="kf-rubrique-hero">
+      <nav class="kf-article__fil" aria-label={SITE_CONFIG.ui.breadcrumbAria}>
+        <a href="/">{SITE_CONFIG.ui.home}</a>
+        <span> / </span>
+        <span>{rubrique.label}</span>
+      </nav>
+      <h1>{heroTitle}</h1>
+      {seoIntro && <p>{seoIntro}</p>}
+    </section>
+
+    <section class="kf-section" style="border-bottom: 0;">
+      {posts.length > 0 ? (
+        <div class="kf-grille">
+          {posts.map((p) => (
+            <CarteArticle
+              href={`/${p.slug}/`}
+              title={p.data.title}
+              excerpt={p.data.excerpt}
+              image={p.data.image}
+              rubrique={rubrique.label}
+              date={p.data.date}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="kf-section__note">{SITE_CONFIG.ui.newContentComing}</p>
+      )}
+    </section>
+
+    {others.length > 0 && (
+      <section class="kf-section">
+        <div class="kf-section__entete">
+          <h2 class="kf-section__titre">{SITE_CONFIG.ui.discover}</h2>
+        </div>
+        <div class="kf-rubriques">
+          {others.map((c) => (
+            <a class="kf-rubrique" href={`/category/${c.slug}/`}>
+              <p class="kf-rubrique__nom">{c.label}</p>
+              <p class="kf-rubrique__gain">{c.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</Layout>

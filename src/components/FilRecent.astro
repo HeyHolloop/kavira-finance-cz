@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from "astro:content";
+import CarteArticle from "./CarteArticle.astro";
+import { SITE_CONFIG, categoryLabel } from "../config";
+
+interface Props {
+  items: CollectionEntry<"articles">[];
+}
+
+const { items } = Astro.props;
+---
+
+{items.length > 0 && (
+  <section class="kf-section">
+    <div class="kf-feuille">
+      <div class="kf-section__entete">
+        <h2 class="kf-section__titre">{SITE_CONFIG.ui.latestArticles}</h2>
+        <p class="kf-section__note">Poslední zpracované postupy, s datem poslední revize.</p>
+      </div>
+
+      <div class="kf-grille">
+        {items.map((p) => (
+          <CarteArticle
+            href={`/${p.slug}/`}
+            title={p.data.title}
+            excerpt={p.data.excerpt}
+            image={p.data.image}
+            rubrique={categoryLabel(p.data.categorySlug || p.data.category)}
+            date={p.data.date}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+)}

@@ -1,0 +1,30 @@
+---
+import { SITE_CONFIG } from "../config";
+
+const outils = SITE_CONFIG.tools ?? { title: "", lead: "", items: [] };
+const instituts = [
+  { nom: "ČSSZ", role: "Dávky, důchod, nemocenské" },
+  { nom: "Finanční správa", role: "Daň z příjmů, kalendář" },
+  { nom: "ČNB", role: "Regulace, úrokové sazby" },
+  { nom: "MPSV", role: "Mzda, pracovní právo" },
+  { nom: "ePortál", role: "Žádosti a přehledy online" },
+];
+---
+
+<section class="kf-section">
+  <div class="kf-feuille">
+    <div class="kf-section__entete">
+      <h2 class="kf-section__titre">{outils.title}</h2>
+      <p class="kf-section__note">{outils.lead}</p>
+    </div>
+
+    <div class="kf-instituts">
+      {instituts.map((i) => (
+        <div class="kf-institut">
+          <p class="kf-institut__nom">{i.nom}</p>
+          <p class="kf-institut__role">{i.role}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

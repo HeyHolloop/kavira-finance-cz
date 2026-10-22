@@ -1,0 +1,113 @@
+---
+import { SITE_CONFIG } from "../config";
+
+const outils = SITE_CONFIG.tools ?? { title: "", lead: "", items: [] };
+---
+
+<section class="kf-section kf-calculatrice-section">
+  <div class="kf-feuille">
+    <div class="kf-section__entete">
+      <h2 class="kf-section__titre">Rychlý výpočet čisté mzdy</h2>
+      <p class="kf-section__note">
+        Zadejte hrubou mzdu a sazby se propíší podle parametrů platných pro rok 2026.
+        Výpočet běží u vás v prohlížeči, žádná data se nikam neposílají.
+      </p>
+    </div>
+
+    <div class="kv-simulator kf-calculatrice">
+      <div class="kf-calculatrice__grille">
+        <div>
+          <label for="kf-bruto">Hrubá mzda (Kč / měsíc)</label>
+          <input id="kf-bruto" type="number" min="0" step="100" value="45000" inputmode="numeric" />
+        </div>
+        <div>
+          <label for="kf-sleva">Sleva na poplatníka (Kč / měsíc)</label>
+          <input id="kf-sleva" type="number" min="0" step="10" value="2570" inputmode="numeric" />
+        </div>
+        <div>
+          <label for="kf-dite">Daňové zvýhodnění na děti (Kč / měsíc)</label>
+          <input id="kf-dite" type="number" min="0" step="10" value="0" inputmode="numeric" />
+        </div>
+      </div>
+
+      <div class="kf-calculatrice__grille">
+        <div>
+          <label for="kf-sp">Sociální pojištění</label>
+          <input id="kf-sp" type="number" min="0" step="0.1" value="7.1" inputmode="decimal" />
+        </div>
+        <div>
+          <label for="kf-zp">Zdravotní pojištění</label>
+          <input id="kf-zp" type="number" min="0" step="0.1" value="4.5" inputmode="decimal" />
+        </div>
+        <div>
+          <label for="kf-dan">Sazba daně z příjmů</label>
+          <input id="kf-dan" type="number" min="0" step="1" value="15" inputmode="numeric" />
+        </div>
+      </div>
+
+      <button id="kf-calc-btn" type="button">Spočítat čistou mzdu</button>
+      <div class="kf-calculatrice__resultat" id="kf-calc-out"></div>
+
+      <p class="kf-calculatrice__note">
+        Výpočet je orientační. Základ daně se zaokrouhluje na celé koruny nahoru do
+        100 Kč a na stokoruny nad 100 Kč. Zvláštní sazby daně, paušální režim i
+        daňový bonus z dětí se počítají jinak — u nich je třeba daňové přiznání.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var brut = document.getElementById("kf-bruto");
+    var sleva = document.getElementById("kf-sleva");
+    var dite = document.getElementById("kf-dite");
+    var sp = document.getElementById("kf-sp");
+    var zp = document.getElementById("kf-zp");
+    var dan = document.getElementById("kf-dan");
+    var btn = document.getElementById("kf-calc-btn");
+    var out = document.getElementById("kf-calc-out");
+
+    function num(el) {
+      var v = parseFloat(String(el.value).replace(",", "."));
+      return isFinite(v) ? v : 0;
+    }
+
+    function roundUp(x) {
+      if (x <= 100) return Math.ceil(x);
+      return Math.ceil(x / 10) * 10;
+    }
+
+    function fmt(n) {
+      return n.toLocaleString("cs-CZ", { maximumFractionDigits: 0 }) + " Kč";
+    }
+
+    function calc() {
+      var b = num(brut);
+      if (b <= 0) {
+        out.innerHTML = "";
+        return;
+      }
+      var social = Math.ceil(b * (num(sp) / 100));
+      var health = Math.ceil(b * (num(zp) / 100));
+      var base = Math.max(0, b - num(sleva) - num(dite));
+      var tax = roundUp(base * (num(dan) / 100));
+      var net = b - social - health - tax;
+
+      out.innerHTML =
+        '<table class="kv-table"><thead><tr><th>Řádek výplatní pásky</th><th>Částka</th></tr></thead><tbody>' +
+        "<tr><td>Hrubá mzda</td><td>" + fmt(b) + "</td></tr>" +
+        "<tr><td>Sociální pojištění (" + num(sp) + " %)</td><td>−" + fmt(social) + "</td></tr>" +
+        "<tr><td>Zdravotní pojištění (" + num(zp) + " %)</td><td>−" + fmt(health) + "</td></tr>" +
+        "<tr><td>Daň z příjmů (" + num(dan) + " %)</td><td>−" + fmt(tax) + "</td></tr>" +
+        '<tr class="kv-total"><td>Čistá mzda</td><td>' + fmt(net) + "</td></tr>" +
+        "</tbody></table>";
+    }
+
+    btn.addEventListener("click", calc);
+    [brut, sleva, dite, sp, zp, dan].forEach(function (el) {
+      el.addEventListener("input", calc);
+    });
+    calc();
+  })();
+</script>

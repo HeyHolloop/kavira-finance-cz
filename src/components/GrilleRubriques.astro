@@ -1,0 +1,41 @@
+---
+import { SITE_CONFIG, CATEGORIES } from "../config";
+
+const home = SITE_CONFIG.home ?? {};
+const items = home.sections ?? [];
+
+const images: Record<string, string> = {
+  "osobni-finance": "/images/rubrika-osobni-finance.jpg",
+  investice: "/images/rubrika-investice.jpg",
+  "kariera-a-vzdelavani": "/images/rubrika-kariera.jpg",
+  "podnikani-a-byznys": "/images/rubrika-podnikani.jpg",
+};
+---
+
+<section class="kf-section" id="rubriky">
+  <div class="kf-feuille">
+    <div class="kf-section__entete">
+      <h2 class="kf-section__titre">{home.sections_title ?? SITE_CONFIG.ui.categories}</h2>
+      <p class="kf-section__note">Čtyři oblasti, čtyři druhy otázek. Každý rozbor vychází z jednoho úředního zdroje.</p>
+    </div>
+
+    <div class="kf-rubriques">
+      {items.map((it: { label: string; benefit: string }, i: number) => {
+        const cat = CATEGORIES[i];
+        const img = cat ? images[cat.slug] : undefined;
+        return (
+          <a class="kf-rubrique" href={`/category/${cat?.slug ?? ""}/`}>
+            {img && (
+              <span class="kf-rubrique__vignette">
+                <img src={img} alt="" loading="lazy" width="1152" height="864" />
+              </span>
+            )}
+            <span class="kf-rubrique__index">{String(i + 1).padStart(2, "0")}</span>
+            <span class="kf-rubrique__nom">{it.label}</span>
+            <span class="kf-rubrique__gain">{it.benefit}</span>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>

@@ -1,6 +1,6 @@
 ---
-title: "dovolená-zaměstnanec-nárok-na-dovolenou-2026-kavirafinance.html"
-metaTitle: "dovolená-zaměstnanec-nárok-na-dovolenou-2026-kavirafinance.html"
+title: "Dovolená zaměstnance v roce 2026: nárok, čerpání a překročení"
+metaTitle: "Dovolená zaměstnance 2026: nárok, čerpání a překročení"
 excerpt: "Každý zaměstnanec má v roce 2026 nárok na nejméně 4 týdny dovolené, tedy 160 hodin při úvazku 40 hodin týdně. Zjistěte, jak se dovolená čerpá, kdy vzniká nárok a co dělat při překročení."
 image: '/images/dovolena-zamestnanec-narok-na-dovolenou-2026-featured.jpg'
 category: 'kariera-a-vzdelavani'

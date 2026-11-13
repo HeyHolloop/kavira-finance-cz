@@ -1,0 +1,48 @@
+---
+title: "OSVČ musí mít podnikatelský účet?! Co říká zákon v roce 2026?"
+metaTitle: "OSVČ musí mít podnikatelský účet: pravidla pro rok 2026?"
+excerpt: "Nemusíte. Žádný zákon to OSVČ nenařizuje. Kdy hlásit účet kvůli DPH, limit 270 000 Kč za den a proč banky ruší osobní účty, návod pro klid při kontrole."
+image: '/images/osvc-musi-mit-podnikatelsky-ucet-featured.jpg'
+category: 'podnikani-a-byznys'
+date: 2026-11-13
+categorySlug: 'podnikani-a-byznys'
+schemaJson: {"@graph": [{"@id": "https://www.kavira-finance.cz/osvc-musi-mit-podnikatelsky-ucet/#article", "url": "https://www.kavira-finance.cz/osvc-musi-mit-podnikatelsky-ucet/", "@type": "NewsArticle", "image": {"url": "https://www.kavira-finance.cz/images/osvc-musi-mit-podnikatelsky-ucet-featured.jpg", "@type": "ImageObject", "width": 1200, "height": 800}, "author": {"@id": "https://www.kavira-finance.cz/#organization"}, "headline": "OSVČ musí mít podnikatelský účet: pravidla pro rok 2026?", "publisher": {"@id": "https://www.kavira-finance.cz/#organization"}, "wordCount": 706, "inLanguage": "cs-CZ", "description": "Nemusíte. Žádný zákon to OSVČ nenařizuje. Kdy hlásit účet kvůli DPH, limit 270 000 Kč za den a proč banky ruší osobní účty, návod pro klid při kontrole.", "dateModified": "2026-11-13T06:09:27.942491", "datePublished": "2026-11-13T05:58:23.481766", "articleSection": "Podnikání & Byznys"}, {"@id": "https://www.kavira-finance.cz/osvc-musi-mit-podnikatelsky-ucet/", "url": "https://www.kavira-finance.cz/osvc-musi-mit-podnikatelsky-ucet/", "name": "OSVČ musí mít podnikatelský účet: pravidla pro rok 2026?", "@type": "WebPage", "isPartOf": {"@id": "https://www.kavira-finance.cz/#website"}, "breadcrumb": {"@id": "https://www.kavira-finance.cz/osvc-musi-mit-podnikatelsky-ucet/#breadcrumb"}, "inLanguage": "cs-CZ", "mainEntity": {"@id": "https://www.kavira-finance.cz/osvc-musi-mit-podnikatelsky-ucet/#article"}, "description": "Nemusíte. Žádný zákon to OSVČ nenařizuje. Kdy hlásit účet kvůli DPH, limit 270 000 Kč za den a proč banky ruší osobní účty, návod pro klid při kontrole.", "dateModified": "2026-11-13T06:09:27.942491", "datePublished": "2026-11-13T05:58:23.481766"}, {"@id": "https://www.kavira-finance.cz/#organization", "url": "https://www.kavira-finance.cz/", "logo": {"url": "https://www.kavira-finance.cz/favicon.svg", "@type": "ImageObject"}, "name": "Kavira Finance", "@type": "Organization"}, {"@id": "https://www.kavira-finance.cz/osvc-musi-mit-podnikatelsky-ucet/#breadcrumb", "@type": "BreadcrumbList", "itemListElement": [{"item": "https://www.kavira-finance.cz", "name": "Home", "@type": "ListItem", "position": 1}, {"item": "https://www.kavira-finance.cz/category/podnikani-a-byznys/", "name": "Podnikání & Byznys", "@type": "ListItem", "position": 2}, {"item": "https://www.kavira-finance.cz/osvc-musi-mit-podnikatelsky-ucet/", "name": "OSVČ musí mít podnikatelský účet: pravidla pro rok 2026?", "@type": "ListItem", "position": 3}]}], "@context": "https://schema.org"}
+---
+
+<div class="kv-prose">
+<div class="kv-shell kv-ouverture"><div class="kv-shell__inner"><p class="kv-kicker">Bez povinného účtu</p><p class="kv-verdict">Jako OSVČ nemusíte mít podnikatelský účet, žádný zákon to nenařizuje, a podnikatelské příjmy můžete přijímat na svůj běžný osobní účet.</p><div class="kv-texte"><ul>
+<li>Osobní a podnikatelské peníze zákon nedělí, protože ručíte celým svým majetkem, oddělení je jen vaše volba pro pořádek.</li>
+<li>Podnikatelský účet je obchodní produkt banky, ne zákonná kategorie, zakládáte ho kvůli službám a přehledu, ne abyste byli v pořádku.</li>
+<li>Jste-li plátce DPH, musíte správci daně nahlásit všechny účty používané k ekonomické činnosti, včetně osobního účtu používaného k podnikání.</li>
+<li>Platba v hotovosti nad 270 000 Kč za jeden den a mezi stejným plátcem a příjemcem musí proběhnout bezhotovostně, třeba převodem nebo kartou.</li>
+<li>Některé banky podnikání na osobním účtu smluvně zakazují, rizikem není pokuta, ale výpověď účtu, podmínky si proto zkontrolujte ve své smlouvě.</li>
+</ul></div></div></div>
+<h2>Podnikatelský účet povinný není</h2>
+<p>Odpověď na otázku, zda OSVČ musí mít podnikatelský účet, zní ne. Žádný zákon neukládá fyzické osobě s živností povinnost vést zvláštní účet pro podnikání. Faktury tak jdou vystavovat i proplácet přes běžný osobní účet, bez pokuty a bez blokace plateb kvůli chybějícímu podnikatelskému účtu.</p>
+<p>Důvod je jednoduchý a věcný. Fyzická osoba ručí za závazky celým svým majetkem, osobní a podnikatelské peníze proto zákon neodděluje zdí. Oddělený účet dává smysl pro přehled, pro doklady a pro klid při kontrole, podmínkou legálního podnikání ale není.</p>
+<p>Podnikatelský účet je obchodní produkt banky, nikoli zákonná kategorie. Banka v něm nastavuje služby, limity a ceník, zákon jeho obsah nedefinuje. Založení pomáhá při párování plateb a při přípravě podkladů, protože příjmy a výdaje z podnikání leží na jednom místě. Pokud pak podnikatel řeší, kam bezpečně uložit volné rezervy, musí si předem spočítat <a href="/sporici-ucet-poplatky-porovnani-inflace/">reálný výnos spořicího účtu</a>, aby očekávaný zisk nesmazala inflace spolu s poplatky.</p>
+<p>Pozor na častý omyl kolem spojení podnikat na vlastní účet z § 420 občanského zákoníku. Vlastním účtem se tam myslí vlastní jméno, tedy že podnikatel nepodniká na někoho jiného. S bankovním účtem nemá tato formulace nic společného a žádnou povinnost účtu nezakládá.</p>
+<h2>Kdy zákon přesto řeší váš účet a hotovost</h2>
+<p>Kdo není plátcem DPH, nemá obecnou povinnost hlásit číslo účtu. Kdo se stane plátcem DPH, ztrácí <a href="/pausalni-dan-osvc-limity-2026/">možnost vstupu do paušální daně</a> a navíc musí podle Generálního finančního ředitelství správci daně oznámit čísla všech účtů používaných k ekonomické činnosti. Patří sem i osobní účet, přes který procházejí tržby nebo platby dodavatelům.</p>
+<p>Oznámení neznamená automatické zveřejnění v registru plátců DPH. Zveřejnění je právo, nikoli povinnost, plátce si vybírá, který z oznámených účtů zveřejní a zda vůbec nějaký. Bez zveřejněného účtu ale podle <a href="https://www.businessinfo.cz/navody/info-institut-ruceni-za-nezaplacenou-dan/">BusinessInfo.cz</a> odběratel riskuje ručení za daň podle § 109 odst. 2 písm. c) zákona o DPH, když zaplatí na jiný než zveřejněný účet, a firemní zákazníci pak často odmítají zaplatit.</p>
+<p>Hotovost má strop 270 000 Kč. Platba nad tuto částku za jeden kalendářní den mezi stejným poskytovatelem a příjemcem musí podle <a href="https://e-sbirka.gov.cz/sb/2004/254">zákona č. 254/2004 Sb.</a> proběhnout bezhotovostně, třeba převodem nebo kartou. Vklad hotovosti na vlastní účet u banky a výběr z účtu se za platbu pro tento limit nepovažují, limit míří na přímé vyrovnání mezi dvěma osobami.</p>
+<p>Přehled ukazuje, kdy jde o povinnost ze zákona a kdy o smluvní riziko u banky.</p>
+<div class="kv-table-wrap"><table class="kv-table">
+<thead><tr><th>Kdy se to řeší</th><th>Co ukládá zákon nebo smlouva</th><th>Co si pohlídat</th></tr></thead>
+<tbody>
+<tr><td>Plátce DPH</td><td>Oznámit správci daně všechny účty k činnosti</td><td>Nahlásit i osobní účet používaný k podnikání</td></tr>
+<tr><td>Platba nad 270 000 Kč za den</td><td>Bezhotovostní úhrada podle § 4 zákona č. 254/2004 Sb.</td><td>Převod nebo karta, ne hotovost z ruky do ruky</td></tr>
+<tr><td>Osobní účet k podnikání</td><td>Zákon nezakazuje, některé banky zakazují ve smlouvě</td><td>Zkontrolovat obchodní podmínky vedení účtu</td></tr>
+<tr><td>Advokátní úschova peněz klientů</td><td>Zvláštní účet označený advokátní úschova</td><td>Neslouží jako běžný účet pro tržby OSVČ</td></tr>
+</tbody>
+</table></div>
+<p>Vezměme si příklad truhláře, který je plátcem DPH a na fakturu píše jen jeden účet. Účet správci daně oznámil, ke zveřejnění v registru plátců DPH ho ale neurčil. Odběratel, firma z vedlejšího města, částku pošle a pak zjistí, že účet není zveřejněný a hrozí ručení za nezaplacenou daň.</p>
+<p>Platbu pozastaví a chce nový podklad se zveřejněným účtem. Truhlář druhý den účet ke zveřejnění určí a peníze dorazí bez dalšího zdržení.</p>
+<h2>Některé banky vám podnikání na osobním účtu zakážou</h2>
+<p>Zákon osobní účet k podnikání nezakazuje, smlouva s bankou ho ale zakázat může. V obchodních podmínkách pro vedení účtu některé banky stojí, že běžný osobní účet neslouží k podnikatelským platbám. Kdo takový účet otevřel jako občan a pak přes něj vede tržby, porušuje pravidla správy a vedení účtu.</p>
+<p>Pokuta za to nehrozí, účet ale ano. Banka může osobní účet používaný k podnikání vypovědět a peníze se pak stěhují jinam narychlo. Proto dává smysl číst obchodní podmínky vlastní banky a nespoléhat na zkušenost odjinud. Praxe se liší banku od banky a obecný zákaz pro všechny účty neexistuje.</p>
+<h2>Co udělat, když si necháte osobní účet</h2>
+<p>Nechat si osobní účet pro podnikání je legální volba. Bezpečná zůstává ve chvíli, kdy sedí smlouva s bankou a plátce DPH má splněné oznamovací povinnosti. V pochybnostech pomůže pohled do obchodních podmínek a dotaz u příslušné správy.</p>
+<p>Těchto pět kontrol zabere chvíli a ušetří dohady s bankou i s odběrateli.</p>
+<ul class="kv-checklist"><li>Přečíst obchodní podmínky vlastní banky, zda osobní účet smí přijímat podnikatelské platby.</li><li>Počítat s tím, že sankcí je výpověď účtu, ne pokuta, a mít připravený náhradní účet.</li><li>Jako plátce DPH oznámit správci daně všechny účty používané k činnosti, včetně osobního.</li><li>Jako plátce DPH určit jeden účet ke zveřejnění v registru plátců DPH, aby odběratel neriskoval ručení za daň.</li><li>Platby v hotovosti nad 270 000 Kč za den mezi stejnými stranami vést bezhotovostně, převodem nebo kartou.</li></ul>
+</div>

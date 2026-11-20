@@ -270,8 +270,8 @@ ul.kv-checklist {
 
 /* ── Objets de lecture : erreurs, chiffres clés, pour qui, options ── */
 /* taille de base : celle du texte, bornée (certains thèmes WP posent 10px sur le conteneur) */
-.kv-erreurs, ul.kv-chiffres.kv-chiffres, .kv-pourqui, .kv-options { font-size: clamp(15px, 1em, 19px); text-align: left; hyphens: manual; }
-.kv-erreurs *, .kv-chiffres *, .kv-pourqui *, .kv-options * { text-align: left; }
+.kv-erreurs, ul.kv-chiffres.kv-chiffres, .kv-pourqui, .kv-options, .kv-change, .kv-courrier, .kv-consulter { font-size: clamp(15px, 1em, 19px); text-align: left; hyphens: manual; }
+.kv-erreurs *, .kv-chiffres *, .kv-pourqui *, .kv-options *, .kv-change *, .kv-courrier *, .kv-consulter * { text-align: left; }
 .kv-erreurs { display: grid; gap: 0.75em; margin: 1.75em 0 2.25em 0; }
 .kv-erreurs .kv-erreurs__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; overflow: hidden; background: #fff; border: 1px solid #c2c8c2; border-radius: 0; }
 .kv-erreurs .kv-erreurs__err, .kv-erreurs .kv-erreurs__fix { margin: 0; padding: 1em 1.15em 1.1em; border: 0; border-radius: 0; box-shadow: none; color: #111a15; }
@@ -302,7 +302,7 @@ ul.kv-chiffres.kv-chiffres { list-style: none; display: grid; grid-template-colu
 .kv-chiffres .kv-chiffres__card { display: block; margin: 0; padding: 1.15em 1.2em 1.2em; background: color-mix(in srgb, #9e4a28 8%, #fff); color: #111a15; border: 1px solid color-mix(in srgb, #9e4a28 28%, #fff); border-radius: 0; }
 .kv-chiffres .kv-chiffres__card { container-type: inline-size; }
 .kv-chiffres .kv-chiffres__val { display: block; margin: 0 0 0.45em 0; padding: 0; background: none; text-decoration: none; font-family: var(--kf-titre, Georgia, serif); font-size: clamp(1.15rem, 14cqi, 1.85em); line-height: 1.05; font-weight: 800; letter-spacing: -0.01em; color: #9e4a28; }
-.kv-chiffres .kv-chiffres__txt { display: block; font-size: 0.92em; line-height: 1.5; color: #111a15; }
+.kv-chiffres .kv-chiffres__txt { display: block; font-size: 0.92em; line-height: 1.5; color: #111a15; overflow-wrap: break-word; hyphens: auto; }
 
 .kv-pourqui { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75em; margin: 1.75em 0 2.25em 0; }
 .kv-pourqui .kv-pourqui__col { margin: 0; padding: 0; overflow: hidden; background: #fff; color: #111a15; border: 1px solid #c2c8c2; border-radius: 0; }
@@ -335,19 +335,63 @@ ul.kv-chiffres > .kv-chiffres__card:nth-child(3n+1):nth-last-child(2), ul.kv-chi
   ul.kv-chiffres.kv-chiffres.kv-chiffres > .kv-chiffres__card.kv-chiffres__card.kv-chiffres__card.kv-chiffres__card { grid-column: span 3; }
   ul.kv-chiffres.kv-chiffres.kv-chiffres > .kv-chiffres__card.kv-chiffres__card.kv-chiffres__card:nth-child(odd):last-child { grid-column: span 6; }
 }
+/* très étroit (mobile) : une carte chiffre par ligne */
+@container (max-width: 420px) {
+  ul.kv-chiffres.kv-chiffres.kv-chiffres > .kv-chiffres__card.kv-chiffres__card.kv-chiffres__card.kv-chiffres__card.kv-chiffres__card { grid-column: span 6; }
+}
 .kv-options .kv-options__card { display: flex; flex-direction: column; margin: 0; padding: 1.1em 1.2em 1.15em; background: #fff; color: #111a15; border: 1px solid #c2c8c2; border-radius: 0; border-top: 4px solid #9e4a28; }
 .kv-options .kv-options__card h3 { margin: 0 0 0.45em 0; font-family: var(--kf-titre, Georgia, serif); font-size: 1.08em; line-height: 1.3; font-weight: 700; color: #9e4a28;  }
 .kv-options .kv-options__card p { margin: 0 0 0.8em 0; font-size: 0.93em; line-height: 1.55; color: #111a15; }
 .kv-options .kv-options__card .kv-options__tag { margin: auto 0 0 0; align-self: flex-start; padding: 0.22em 0.7em; border-radius: 999px; background: color-mix(in srgb, #9e4a28 14%, #fff); color: #9e4a28; font-family: inherit; font-size: 0.75em; line-height: 1.3; font-weight: 700; }
 .kv-options .kv-options__card .kv-options__tag::first-letter { text-transform: uppercase; }
 
+/* ce qui a changé : une ligne par point, ancienne règle grisée, nouvelle règle en couleur du site */
+.kv-change { display: grid; gap: 0.75em; margin: 1.75em 0 2.25em 0; }
+.kv-change .kv-change__row { display: grid; grid-template-columns: 1fr 1fr; margin: 0; overflow: hidden; background: #fff; border: 1px solid #c2c8c2; border-radius: 0; }
+.kv-change .kv-change__sujet { grid-column: 1 / -1; margin: 0; padding: 0.7em 1.15em; font-family: var(--kf-titre, Georgia, serif); font-size: 1em; line-height: 1.3; font-weight: 800; color: #9e4a28; border-bottom: 1px solid #c2c8c2; }
+.kv-change .kv-change__old, .kv-change .kv-change__new { margin: 0; padding: 0.9em 1.15em 1em; }
+.kv-change .kv-change__old { background: #f5f5f4; color: #57534e; }
+.kv-change .kv-change__new { background: color-mix(in srgb, #9e4a28 8%, #fff); border-left: 1px solid #c2c8c2; }
+.kv-change .kv-change__lab { margin: 0 0 0.4em 0; font-family: inherit; font-size: 0.7em; line-height: 1.2; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.kv-change .kv-change__old .kv-change__lab { color: #78716c; }
+.kv-change .kv-change__new .kv-change__lab { color: #9e4a28; }
+.kv-change .kv-change__row ~ .kv-change__row .kv-change__lab { display: none; }
+.kv-change .kv-change__txt { margin: 0; font-size: 0.95em; line-height: 1.55; }
+.kv-change .kv-change__old .kv-change__txt { color: #57534e; }
+.kv-change .kv-change__new .kv-change__txt { color: #111a15; }
+
+/* modèle de courrier : une feuille, cases à remplir surlignées */
+.kv-courrier { margin: 1.75em 0 2.25em 0; }
+.kv-courrier .kv-courrier__titre { margin: 0 0 0.5em 0; font-family: inherit; font-size: 0.75em; line-height: 1.3; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #9e4a28; }
+.kv-courrier .kv-courrier__page { margin: 0; padding: 1.4em 1.6em 1.3em; background: #fffefb; color: #111a15; border: 1px solid #c2c8c2; border-radius: 0; border-left: 4px solid #9e4a28; }
+.kv-courrier .kv-courrier__objet { margin: 0 0 1em 0; font-weight: 700; font-size: 0.97em; line-height: 1.45; }
+.kv-courrier .kv-courrier__corps p { margin: 0 0 0.8em 0; font-size: 0.95em; line-height: 1.65; }
+.kv-courrier .kv-courrier__corps p:last-child { margin-bottom: 0; }
+.kv-courrier .kv-courrier__case { padding: 0 0.3em; border-radius: 3px; background: color-mix(in srgb, #9e4a28 14%, #fff); color: #9e4a28; font-style: italic; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+/* quand appeler un pro : gérer seul (couleur du site) / appeler sans attendre (ambre) */
+.kv-consulter { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75em; margin: 1.75em 0 2.25em 0; }
+.kv-consulter .kv-consulter__col { margin: 0; padding: 0; overflow: hidden; background: #fff; color: #111a15; border: 1px solid #c2c8c2; border-radius: 0; }
+.kv-consulter .kv-consulter__head { margin: 0; padding: 0.75em 1.1em; font-family: var(--kf-titre, Georgia, serif); font-size: 1em; line-height: 1.3; font-weight: 800; }
+.kv-consulter .kv-consulter__seul .kv-consulter__head { background: color-mix(in srgb, #9e4a28 8%, #fff); color: #9e4a28; }
+.kv-consulter .kv-consulter__appeler .kv-consulter__head { background: #fff4e2; color: #8a4a00; }
+ul.kv-consulter__list.kv-consulter__list { list-style: none; margin: 0; padding: 0.9em 1.1em 0.6em; }
+.kv-consulter .kv-consulter__list > li { display: flex; gap: 0.6em; margin: 0 0 0.65em 0; padding: 0; font-size: 0.95em; line-height: 1.5; color: #111a15; }
+.kv-consulter .kv-consulter__ico { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 1.3em; height: 1.3em; margin-top: 0.1em; border-radius: 999px; font-size: 0.7em; font-weight: 900; }
+.kv-consulter .kv-consulter__seul .kv-consulter__ico { background: color-mix(in srgb, #9e4a28 14%, #fff); color: #9e4a28; }
+.kv-consulter .kv-consulter__appeler .kv-consulter__ico { background: #f7d39a; color: #8a4a00; }
+
 /* puces et marqueurs du thème : jamais dans ces blocs */
 .kv-chiffres .kv-chiffres__card::before, .kv-chiffres .kv-chiffres__card::after,
-.kv-pourqui .kv-pourqui__list > li::before, .kv-pourqui .kv-pourqui__list > li::after { content: none; display: none; }
+.kv-pourqui .kv-pourqui__list > li::before, .kv-pourqui .kv-pourqui__list > li::after,
+.kv-consulter .kv-consulter__list > li::before, .kv-consulter .kv-consulter__list > li::after { content: none; display: none; }
 
 @media (max-width: 640px) {
   .kv-erreurs .kv-erreurs__pair { grid-template-columns: 1fr; }
   .kv-erreurs .kv-erreurs__fix { border-left: 0; border-top: 1px solid #c2c8c2; }
-  .kv-pourqui { grid-template-columns: 1fr; }
+  .kv-pourqui, .kv-consulter, .kv-change .kv-change__row { grid-template-columns: 1fr; }
+  .kv-change .kv-change__new { border-left: 0; border-top: 1px solid #c2c8c2; }
+  .kv-change .kv-change__row ~ .kv-change__row .kv-change__lab { display: block; }
+  .kv-courrier .kv-courrier__page { padding: 1.1em 1.1em 1em; }
 }
 /* <<< objets-lecture */

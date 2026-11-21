@@ -277,13 +277,14 @@ ul.kv-checklist {
 .kv-erreurs .kv-erreurs__err, .kv-erreurs .kv-erreurs__fix { margin: 0; padding: 1em 1.15em 1.1em; border: 0; border-radius: 0; box-shadow: none; color: #111a15; }
 .kv-erreurs .kv-erreurs__err { background: #fdf1ef; }
 .kv-erreurs .kv-erreurs__fix { background: #eef7f0; border-left: 1px solid #c2c8c2; }
-.kv-erreurs .kv-erreurs__lab { display: flex; align-items: center; gap: 0.5em; margin: 0 0 0.5em 0; font-family: inherit; font-size: 0.7em; line-height: 1.2; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.kv-erreurs .kv-erreurs__lab { display: flex; align-items: center; gap: 0.5em; margin: 0 0 0.5em 0; font-family: inherit; font-size: 0.7em !important; line-height: 1.2; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
 .kv-erreurs .kv-erreurs__err .kv-erreurs__lab { color: #a8321f; }
 .kv-erreurs .kv-erreurs__fix .kv-erreurs__lab { color: #1f6b3d; }
 .kv-erreurs .kv-erreurs__ico { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 1.9em; height: 1.9em; border-radius: 999px; font-size: 1.05em; font-weight: 900; letter-spacing: 0; }
 .kv-erreurs .kv-erreurs__err .kv-erreurs__ico { background: #f9d9d3; }
 .kv-erreurs .kv-erreurs__fix .kv-erreurs__ico { background: #cfead8; }
-.kv-erreurs .kv-erreurs__pair ~ .kv-erreurs__pair .kv-erreurs__lab { font-size: 0; gap: 0; letter-spacing: 0; }
+/* !important : certains thèmes WP forcent la taille de tout <p> de l'article (capitavenir : 17px !important) */
+.kv-erreurs .kv-erreurs__pair ~ .kv-erreurs__pair .kv-erreurs__lab { font-size: 0 !important; gap: 0; letter-spacing: 0; }
 .kv-erreurs .kv-erreurs__pair ~ .kv-erreurs__pair .kv-erreurs__ico { font-size: 12px; }
 .kv-erreurs .kv-erreurs__txt { margin: 0; font-size: 0.95em; line-height: 1.55; color: #111a15; }
 .kv-erreurs .kv-erreurs__cap { display: block; margin: 0 0 0.2em 0; padding: 0; background: none; text-decoration: none; font-weight: 800; color: #111a15; }
